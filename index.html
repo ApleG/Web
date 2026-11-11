@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#13211f" />
+  <meta name="description" content="《西迁长卷》——以浙江大学西迁为背景的互动叙事网页。七幕选择，数种结局与离队分支，重走一支“文军”的长征。" />
+  <title>西迁长卷 · 求是之路 1937—1946</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">跳到主要内容</a>
+
+  <div class="page-texture" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="brand" id="brandBtn" type="button" aria-label="回到封面">
+      <span class="brand-seal" aria-hidden="true">求</span>
+      <span class="brand-text">
+        <strong data-bind="ui.brand">求是 · 西迁长卷</strong>
+        <span data-bind="ui.brandSub">1937—1946</span>
+      </span>
+    </button>
+
+    <nav class="topnav" aria-label="页面导航">
+      <button class="nav-btn" id="galleryBtn" type="button" data-bind="ui.navGallery">结局图鉴</button>
+      <button class="nav-btn" id="aboutBtn" type="button" data-bind="ui.navAbout">关于本作</button>
+      <button class="nav-btn sound-btn" id="soundBtn" type="button" aria-pressed="false">
+        <span class="sound-dot" aria-hidden="true"></span>
+        <span id="soundBtnText" data-bind="ui.soundOff">声音：关</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <!-- ========== 封面 ========== -->
+    <section class="screen cover-screen" id="coverScreen">
+      <div class="cover-sky" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="coverSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0d1717"/>
+              <stop offset="52%" stop-color="#203330"/>
+              <stop offset="100%" stop-color="#816a4c"/>
+            </linearGradient>
+            <linearGradient id="coverHillA" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#243c36"/>
+              <stop offset="100%" stop-color="#111e1c"/>
+            </linearGradient>
+            <linearGradient id="coverHillB" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#162724"/>
+              <stop offset="100%" stop-color="#0a1211"/>
+            </linearGradient>
+            <radialGradient id="coverMoon" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#f5dfb0" stop-opacity=".95"/>
+              <stop offset="42%" stop-color="#e8c98c" stop-opacity=".5"/>
+              <stop offset="100%" stop-color="#e8c98c" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="1440" height="900" fill="url(#coverSky)"/>
+          <circle cx="1080" cy="220" r="180" fill="url(#coverMoon)"/>
+          <circle cx="1080" cy="220" r="56" fill="#f3dbaa" opacity=".9"/>
+          <g opacity=".38" fill="#f1dfba">
+            <circle cx="170" cy="130" r="1.4"/><circle cx="260" cy="210" r="1"/><circle cx="390" cy="95" r="1.7"/>
+            <circle cx="520" cy="180" r="1"/><circle cx="700" cy="120" r="1.2"/><circle cx="860" cy="80" r="1"/>
+            <circle cx="1260" cy="120" r="1.4"/><circle cx="1340" cy="280" r="1"/><circle cx="930" cy="250" r="1.1"/>
+          </g>
+          <path d="M0 610 L130 520 L245 575 L380 470 L510 560 L650 505 L790 590 L930 500 L1080 585 L1210 520 L1340 590 L1440 540 L1440 900 L0 900 Z" fill="url(#coverHillA)" opacity=".8"/>
+          <path d="M0 700 L160 620 L300 690 L430 610 L560 690 L700 620 L850 700 L1000 630 L1160 710 L1300 640 L1440 710 L1440 900 L0 900 Z" fill="url(#coverHillB)"/>
+          <path d="M0 760 Q260 715 520 760 T1040 760 T1440 745 L1440 900 L0 900 Z" fill="#0a1110"/>
+          <g fill="#0b1211">
+            <path d="M190 760 l30 -45 l30 45 z"/>
+            <path d="M236 766 l24 -36 l24 36 z"/>
+            <path d="M1210 756 l35 -54 l35 54 z"/>
+            <path d="M1265 768 l24 -36 l24 36 z"/>
+          </g>
+          <g stroke="#c7a66b" stroke-opacity=".55" fill="none">
+            <path d="M110 690 Q300 605 505 670 T900 645 T1310 690" stroke-width="1.2" stroke-dasharray="3 9"/>
+          </g>
+          <g fill="#d4b477">
+            <circle cx="110" cy="690" r="3"/><circle cx="505" cy="670" r="3"/><circle cx="900" cy="645" r="3"/><circle cx="1310" cy="690" r="3"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="cover-grid">
+        <div class="cover-intro">
+          <p class="eyebrow" data-bind="cover.eyebrow">国立浙江大学 · 西迁互动叙事</p>
+          <h1 class="cover-title">
+            <span class="cover-title-cn" data-bind="cover.title">西迁长卷</span>
+            <span class="cover-title-en" data-bind="cover.titleEn">THE LONG MARCH OF A UNIVERSITY</span>
+          </h1>
+          <div class="title-rule" aria-hidden="true"><span></span><i></i><span></span></div>
+          <p class="cover-subtitle" data-bind="cover.subtitle">求是之路 · 1937—1946</p>
+          <p class="cover-theme" data-bind="cover.theme">探寻校史荣光 · 传承求是精神</p>
+          <p class="cover-lead" data-bind="cover.lead">1937年秋，杭州的炮声越来越近。</p>
+          <p class="cover-desc" data-bind="cover.description"></p>
+        </div>
+
+        <aside class="cover-card" aria-label="开始游戏">
+          <div class="cover-card-head">
+            <span class="cover-card-label">1937 / 1946</span>
+            <span class="cover-card-line"></span>
+          </div>
+          <ul class="meta-list" id="coverMeta"></ul>
+          <div class="cover-actions">
+            <button class="btn btn-primary btn-large" id="startBtn" type="button">开始西迁</button>
+            <button class="btn btn-ghost btn-large" id="resumeBtn" type="button" hidden>继续前行</button>
+            <div class="cover-subactions">
+              <button class="text-link" id="coverGalleryBtn" type="button" data-bind="cover.gallery">结局图鉴</button>
+              <span aria-hidden="true">·</span>
+              <button class="text-link" id="coverAboutBtn" type="button" data-bind="cover.about">创作说明</button>
+              <span aria-hidden="true">·</span>
+              <button class="text-link" id="coverRestartBtn" type="button" data-bind="cover.restart" hidden>重新开始</button>
+            </div>
+          </div>
+          <p class="cover-hint" data-bind="cover.hint"></p>
+          <blockquote class="cover-quote">
+            <p data-bind="cover.quote"></p>
+            <cite data-bind="cover.quoteFrom"></cite>
+          </blockquote>
+          <p class="cover-footnote" data-bind="cover.footnote"></p>
+        </aside>
+      </div>
+
+      <div class="cover-bottom">
+        <div class="cover-route" id="coverRoute" aria-label="西迁路线"></div>
+        <div class="scroll-cue" aria-hidden="true">
+          <span></span>
+          <em>SCROLL / 向下</em>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 游戏界面 ========== -->
+    <section class="screen game-screen" id="gameScreen" hidden>
+      <div class="game-layout">
+        <aside class="visual-pane" aria-label="场景插画与路线">
+          <div class="scene-art" id="sceneArt" aria-hidden="true"></div>
+          <div class="visual-shade" aria-hidden="true"></div>
+
+          <div class="visual-top">
+            <span class="visual-archive" id="sceneArchive">档案 01</span>
+            <span class="visual-route-title" data-bind="ui.routeTitle">西迁路线</span>
+          </div>
+
+          <div class="visual-copy">
+            <p class="chapter-label" id="sceneChapter">第一幕</p>
+            <h2 class="scene-title" id="sceneTitle">灯还亮着</h2>
+            <p class="scene-place" id="scenePlace">杭州 · 西子湖畔</p>
+            <blockquote class="scene-epigraph">
+              <p id="sceneEpigraph"></p>
+              <cite id="sceneEpigraphFrom"></cite>
+            </blockquote>
+          </div>
+
+          <div class="route-rail" id="routeRail" aria-label="剧情进度"></div>
+
+          <div class="visual-foot">
+            <span id="sceneProgressText">第 1 幕 / 共七幕</span>
+            <span class="visual-foot-line" aria-hidden="true"></span>
+            <span>1937—1946</span>
+          </div>
+        </aside>
+
+        <section class="reading-pane" aria-label="剧情与选择">
+          <div class="reading-top">
+            <span class="reading-date" id="sceneDate">1937年11月11日</span>
+            <button class="reading-log-link" id="historyBtn" type="button">记录</button>
+          </div>
+
+          <div class="reading-scroll" id="readingScroll">
+            <div class="narrative" id="narrative"></div>
+
+            <div class="choice-block" id="choiceBlock">
+              <p class="choice-prompt" id="choicePrompt">藤箱有限，你决定带走——</p>
+              <div class="choices" id="choiceList" role="group" aria-label="选择"></div>
+            </div>
+
+            <div class="echo-block" id="echoBlock" hidden>
+              <div class="echo-head">
+                <span class="echo-label" data-bind="ui.echo">回响</span>
+                <span class="echo-choice" id="echoChoice"></span>
+              </div>
+              <div class="echo-text" id="echoText"></div>
+              <div class="history-note" id="historyNote"></div>
+              <div class="echo-actions">
+                <button class="btn btn-primary" id="continueBtn" type="button" data-bind="ui.continue">继续前行</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ========== 结局界面 ========== -->
+    <section class="screen ending-screen" id="endingScreen" hidden>
+      <div class="ending-hero">
+        <div class="ending-art" id="endingArt" aria-hidden="true"></div>
+        <div class="ending-hero-shade" aria-hidden="true"></div>
+        <div class="ending-hero-inner">
+          <p class="ending-kicker" id="endingKicker">真实历史结局</p>
+          <h1 class="ending-title" id="endingTitle">山河弦歌</h1>
+          <p class="ending-subtitle" id="endingSubtitle">1946年，文军东归</p>
+          <blockquote class="ending-quote" id="endingQuote"></blockquote>
+          <p class="ending-reached" data-bind="ui.endingReached">结局已抵达</p>
+        </div>
+      </div>
+
+      <div class="ending-content">
+        <div class="ending-main">
+          <div class="ending-text" id="endingParagraphs"></div>
+          <p class="ending-stats-note" id="endingStatsNote"></p>
+          <div class="ending-timeline" id="endingTimeline" aria-label="你的选择记录"></div>
+        </div>
+
+        <aside class="ending-side">
+          <div class="ending-card">
+            <p class="side-label" data-bind="ui.endingStats">你的西迁心灯</p>
+            <div class="ending-stats" id="endingStats"></div>
+            <p class="ending-run" id="endingRun"></p>
+          </div>
+
+          <div class="ending-card">
+            <p class="side-label" id="endingHistoryLabel" data-bind="ui.endingHistoryLabel">史实坐标</p>
+            <ul class="history-list" id="endingHistoryBox"></ul>
+          </div>
+
+          <div class="ending-card article-card">
+            <p class="side-label" data-bind="ui.articleKicker">延伸阅读 · 特别报道</p>
+            <h3 id="articleCardTitle">一盏灯，两千里</h3>
+            <p id="articleCardDesc">寻访浙江大学西迁之路：从杭州到湄潭，一所大学如何在炮火中把书桌支起来。</p>
+            <button class="btn btn-ink" id="readArticleBtn" type="button" data-bind="ui.readArticle">阅读延伸特稿</button>
+          </div>
+
+          <div class="ending-actions">
+            <button class="btn btn-primary" id="replayBtn" type="button" data-bind="ui.replay">再走一次</button>
+            <button class="btn btn-ghost" id="endingHomeBtn" type="button" data-bind="ui.backHome">回到封面</button>
+            <button class="text-link" id="endingGalleryBtn" type="button" data-bind="ui.gallery">查看结局图鉴</button>
+          </div>
+
+          <div class="player-note" id="playerNoteBox" hidden>
+            <label class="side-label" for="playerNoteInput" data-bind="ui.playerNoteLabel">写给 2026 年的自己</label>
+            <textarea id="playerNoteInput" rows="3" maxlength="120" data-bind-placeholder="ui.playerNotePlaceholder"></textarea>
+            <button class="btn btn-ink btn-small" id="saveNoteBtn" type="button" data-bind="ui.playerNoteButton">把这句话留在灯下</button>
+            <p class="note-saved" id="noteSaved" hidden data-bind="ui.playerNoteSaved"></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="siteFooter">
+    <div>
+      <p id="footerLine1"></p>
+      <p id="footerLine2"></p>
+    </div>
+    <p id="footerLine3"></p>
+  </footer>
+
+  <!-- ========== 延伸阅读 ========== -->
+  <div class="overlay reading-overlay" id="readingOverlay" hidden>
+    <div class="overlay-backdrop" data-close="readingOverlay"></div>
+    <article class="reading-sheet" role="dialog" aria-modal="true" aria-labelledby="articleTitle">
+      <div class="reading-toolbar">
+        <span class="reading-toolbar-label" data-bind="ui.articleTitle">特稿</span>
+        <div class="reading-toolbar-actions">
+          <button class="mini-btn" id="printArticleBtn" type="button" data-bind="ui.print">打印本文</button>
+          <button class="icon-btn" type="button" data-close="readingOverlay" aria-label="关闭文章">×</button>
+        </div>
+      </div>
+      <div class="article-body" id="articleBody"></div>
+    </article>
+  </div>
+
+  <!-- ========== 结局图鉴 ========== -->
+  <div class="modal" id="galleryModal" hidden>
+    <div class="modal-backdrop" data-close="galleryModal"></div>
+    <section class="modal-card gallery-card" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+      <div class="modal-head">
+        <div>
+          <p class="modal-kicker" id="galleryKicker" data-bind="ui.galleryKicker">ARCHIVE / 结局档案</p>
+          <h2 id="galleryTitle" data-bind="ui.galleryTitle">结局图鉴</h2>
+        </div>
+        <button class="icon-btn" type="button" data-close="galleryModal" aria-label="关闭图鉴">×</button>
+      </div>
+      <p class="modal-lead" id="galleryLead"></p>
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <p class="modal-footnote" id="galleryFootnote"></p>
+    </section>
+  </div>
+
+  <!-- ========== 关于 ========== -->
+  <div class="modal" id="aboutModal" hidden>
+    <div class="modal-backdrop" data-close="aboutModal"></div>
+    <section class="modal-card about-card" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+      <div class="modal-head">
+        <div>
+          <p class="modal-kicker" id="aboutKicker" data-bind="ui.aboutKicker">ABOUT / 创作说明</p>
+          <h2 id="aboutTitle" data-bind="ui.aboutTitle">关于《西迁长卷》</h2>
+        </div>
+        <button class="icon-btn" type="button" data-close="aboutModal" aria-label="关闭说明">×</button>
+      </div>
+      <div class="about-body" id="aboutBody"></div>
+    </section>
+  </div>
+
+  <!-- ========== 选择记录 ========== -->
+  <div class="modal" id="historyModal" hidden>
+    <div class="modal-backdrop" data-close="historyModal"></div>
+    <section class="modal-card history-card" role="dialog" aria-modal="true" aria-labelledby="historyTitle">
+      <div class="modal-head">
+        <div>
+          <p class="modal-kicker" id="historyKicker" data-bind="ui.historyKicker">LOG / 选择记录</p>
+          <h2 id="historyTitle" data-bind="ui.historyTitle">这一路，你走过的选择</h2>
+        </div>
+        <button class="icon-btn" type="button" data-close="historyModal" aria-label="关闭记录">×</button>
+      </div>
+      <div class="history-log" id="historyLog"></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript">本作品需要启用 JavaScript 才能体验互动剧情。请在浏览器设置中启用 JavaScript 后刷新页面。</div>
+  </noscript>
+
+  <script src="js/content.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
